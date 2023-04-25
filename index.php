@@ -1,6 +1,6 @@
 <?php
 
-$request ['merchantId'] = "PGTESTPAYUAT109";
+$request ['merchantId'] = ""; //PUT YOUR MERCHANT ID HERE
 $request ['merchantTransactionId'] = "MT".time();
 $request ['merchantUserId'] = "MUID".time();
 $request ['amount'] = 10000;
@@ -11,7 +11,7 @@ $request ['mobileNumber'] = "9999999999";
 $request11 ['type'] = "PAY_PAGE";
 $request ['paymentInstrument'] = $request11;
 
-$salt="bc3836cb-eea1-487b-99e5-53e832d51f13";
+$salt=""; //PUT YOUR SALT HERE
 $requestJson = json_encode($request);
 $base = base64_encode($requestJson);
 $hasbValue = base64_encode($requestJson). "/pg/v1/pay" . $salt;
